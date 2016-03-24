@@ -9,4 +9,4 @@ def clear():
 	print("\n" * 100)
 
 def wait(sec):
-	time.sleep(sec)
+	time.sleep(sec) 
