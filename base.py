@@ -4,7 +4,7 @@
 ### Create Your Own Minecraft Server ###
 ########################################
 from commun import *
-
+import requests
 yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
 
 
@@ -44,5 +44,10 @@ elif serv1 >= 1.4:
 			ydown = input("The program go download the server jar files . Do you want to continue ? Y/N")
 
 
-
+fileName = 'versdown/serv.jar'
+req = requests.get(versionwant)
+file = open(fileName, 'wb')
+for chunk in req.iter_content(100000):
+    file.write(chunk)
+file.close()
 ############################
