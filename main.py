@@ -8,9 +8,9 @@ from commun import *
 
 bcl = 1
 nbnotfound = 1
+clear()
 while bcl:
-	pass
-	clear
+
 	print("###############################\n### Minecraft Server Maker ###\n##############################")
 	a=input("[1] Create Server [2] Start Server [3] Quit : ")
 
@@ -26,8 +26,11 @@ while bcl:
 
 
 
+
 	elif a == "3":
 		print("Good Bye ;)")
+		wait(1)
+		clear()
 		exit(0)
 
 
@@ -37,3 +40,10 @@ while bcl:
 		print("Command not found\n:(")
 		print("Error #", nbnotfound)
 		nbnotfound += 1
+
+	if nbnotfound > 20:
+		print("Sorry but the program gona shutdown beceause you enter 20 false result !!!!! :/")
+		wait(2)
+		clear()
+		print("Good Bye")
+		exit(0)
