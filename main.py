@@ -17,19 +17,16 @@ while bcl:
 
 
 
-	if a == 1:
+	if a == "1":
 		clear()
 		print("Starting creation of the server")
-		wait(0.5)
-		print(".................................................")
-		wait(1)
-		print("................................................")
-		wait(1)
+		load(4)
+		import base
 		bcl = 0
 
 
 
-	elif a == 3:
+	elif a == "3":
 		print("Good Bye ;)")
 		exit(0)
 
