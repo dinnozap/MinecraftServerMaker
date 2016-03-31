@@ -6,6 +6,7 @@
 
 from commun import *
 import os
+
 os.remove("install.py")
 bcl = 1
 nbnotfound = 1
@@ -13,7 +14,7 @@ clear()
 while bcl:
 
 	print("###############################\n### Minecraft Server Maker ###\n##############################")
-	a=input("[1] Create Server [2] Start Server [3] Quit : ")
+	a=input("[1] Create Server [2] Quit : ")
 
 
 
@@ -28,7 +29,7 @@ while bcl:
 
 
 
-	elif a == "3":
+	elif a == "2":
 		print("Good Bye ;)")
 		wait(1)
 		clear()
