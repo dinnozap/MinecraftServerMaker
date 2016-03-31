@@ -5,7 +5,8 @@
 ########################################
 
 from commun import *
-
+import os
+os.remove("install.py")
 bcl = 1
 nbnotfound = 1
 clear()
