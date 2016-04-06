@@ -12,11 +12,15 @@ def clear():
 
 def wait(sec):
 	time.sleep(sec) 
+
+
+
+	
 def server(version):
 	a = version
-	b = a[0] + "." + a[2] 
-	if a[3]:
-		b = a[0] + "." + a[2] + "." + a[3]
+	b = a[0] +"." + a[2] 
+	if len(a) >  3:
+		b = a[0] + "." + a[2] + "." + a[4]
 	a = str(b) + ''
 	
 	version1 = "https://s3.amazonaws.com/Minecraft.Download/versions/"+a+"/minecraft_server."+a+".jar"
@@ -70,7 +74,7 @@ def download(url, fichier):
 
 def Ch_Vanilla():
 		serv=input("Please enter the version of your futur server (1.x or 1.x.x) :")
-		if serv[4]:
+		if len(serv) > 5:
 			serv= serv[0] + serv[1] + serv[2] +serv[4]
 		else:
 			pass
@@ -82,3 +86,17 @@ def Ch_Vanilla():
 		elif serv1 >= 1.4:
 			versionwant=server(serv)
 		return versionwant
+
+
+a1 = "http://getspigot.org/jenkins/job/Spigot/46/artifact/spigot-1.9.jar"
+b2= "http://getspigot.org/jenkins/job/Spigot/2/artifact/spigot-1.8.jar"
+c3 =" http://getspigot.org/spigot/spigot-1.7.10-R0.1-SNAPSHOTBuild1646.jar"
+def Ch_Spigot():
+	serv1=input("Please enter the version of your futur server (1.9 or 1.8 or 1.7.10) :")
+	if serv1 == "1.9":
+		versionwant1 = a1
+	elif serv1 == "1.8":
+		versionwant1 = b2
+	elif serv1 == "1.7.10":
+		versionwant1 = c3
+	return versionwant1
