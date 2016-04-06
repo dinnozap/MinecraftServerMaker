@@ -9,16 +9,23 @@ from commun import *
 import subprocess
 import os, sys
 import threading
-
 clear()
+y = 1
+Y = 2
+n = 3
+N = 4 
 yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
 
-
+if yn == y or yn == Y:
+	yn = "Y"
+elif yn == n or yn == N:
+	yn = "N"
 cont = 1
+
 while cont:
-	if yn == "Y" or yn == "y" or yn == y or yn == Y:
+	if yn == "Y" or yn == "y":
 		cont = 0
-	elif yn == "N" or yn == "n" or yn == n or yn == N:
+	elif yn == "N" or yn == "n":
 		exit(0)
 	else:
 		print("Wait one second...")
