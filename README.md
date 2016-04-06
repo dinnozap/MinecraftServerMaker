@@ -31,7 +31,6 @@ Create your own Minecraft server
 - unzip it
 - install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
 - Install python 3.x : https://www.python.org/downloads/
-- 
 - Run the main.py file with python
 - Done ! :)
 
