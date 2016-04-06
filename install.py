@@ -47,7 +47,7 @@ def unzip(source , destination):
 ##------------ Path Install.py ------
 
 pathname = os.path.dirname(sys.argv[0])        
-pathact = os.path.abspath(pathname) + "\\"
+pathact = os.path.abspath(pathname) + "/"
 print( pathact)
 
 ##---------------- Download + Unzip + Copy ----------
