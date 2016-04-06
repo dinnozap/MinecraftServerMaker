@@ -15,7 +15,7 @@ y = 1
 Y = 2
 n = 3
 N = 4 
-yn = raw_input("Do you really want to create your Minecraft Server ? Y/N     :")
+yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
 
 if yn == y or yn == Y:
 	yn = "Y"
@@ -32,17 +32,17 @@ while cont:
 		print("Wait one second...")
 		wait(1)
 		print("Please enter a correct value:")
-		yn = raw_input("Do you really want to create your Minecraft Server ? Y/N")
+		yn = input("Do you really want to create your Minecraft Server ? Y/N")
 
 
 #Create - Find ldink
-ServerName = raw_input("Please enter the name of your futur server : ")
+ServerName = input("Please enter the name of your futur server : ")
 if not os.path.exists(ServerName):
 	os.mkdir(ServerName)
 BoucleServer=True
 
 while BoucleServer:
-	ServerBase=raw_input("Please choos :\n (1) CraftBukkit \n (2) Vanilla \n (3) Spigot\n\n Enter 1 or 2 or 3 : ")
+	ServerBase=input("Please choos :\n (1) CraftBukkit \n (2) Vanilla \n (3) Spigot\n\n Enter 1 or 2 or 3 : ")
 	if ServerBase == "1":
 		clear()
 		BoucleServer=False	
