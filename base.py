@@ -11,22 +11,14 @@ import os, sys
 import threading
 
 clear()
-y = 1
-Y = 2
-n = 3
-N = 4 
 yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
 
-if yn == y or yn == Y:
-	yn = "Y"
-elif yn == n or yn == N:
-	yn = "N"
-cont = 1
 
+cont = 1
 while cont:
-	if yn == "Y" or yn == "y":
+	if yn == "Y" or yn == "y" or yn == y or yn == Y:
 		cont = 0
-	elif yn == "N" or yn == "n":
+	elif yn == "N" or yn == "n" or yn == N or yn == n:
 		exit(0)
 	else:
 		print("Wait one second...")
@@ -42,10 +34,27 @@ if not os.path.exists(ServerName):
 BoucleServer=True
 
 while BoucleServer:
-	ServerBase=input("Please choos :\n (1) CraftBukkit \n (2) Vanilla \n (3) Spigot\n\n Enter 1 or 2 or 3 : ")
+	ServerBase=input("Please choose :\n (1)Spigot \n (2) Vanilla \n\n Enter 1 or 2  : ")
 	if ServerBase == "1":
 		clear()
-		BoucleServer=False	
+		BoucleServer=False
+		versionwant2=Ch_Spigot()
+		clear()
+		print
+		print("We are downloading the server files, Please wait a few seconds .")
+ 
+		download(versionwant2 , ServerName + "/" + ServerName+".jar")
+		download("http://puu.sh/o8uA9/fbe7e61cc6.py",ServerName + "/" + "launch.py" )
+		pathname = os.path.dirname(sys.argv[0])        
+		pathact = os.path.abspath(pathname) + "\\"
+		pathact = pathact + ServerName + '/'
+		fichier = open(ServerName + "/" + "name.py", "w")
+		fichier.write("ServerName = \""+ServerName+"\"")
+		fichier.close()
+
+		print("To start the server the server, launch the zero.py file in the folder " + ServerName)
+
+
 
 	elif ServerBase == "2":
 		clear()
@@ -53,22 +62,16 @@ while BoucleServer:
 		versionwant1=Ch_Vanilla()
 		clear()
 		print("We are downloading the server files, Please wait a few seconds .")
-
+		download("http://puu.sh/o8uA9/fbe7e61cc6.py",ServerName + "/" + "launch.py" )
 		download(versionwant1 , ServerName + "/" + ServerName+".jar")
 		pathname = os.path.dirname(sys.argv[0])        
 		pathact = os.path.abspath(pathname) + "\\"
 		pathact = pathact + ServerName + '/'
 		print("pathact")
-		fichier = open(ServerName + "/" + "name.py", "w")
-		fichier.write("ServerName = "+ "\""+ServerName+"\"")
+		fichier = open(ServerName + "/" + "zero.py", "w")
+		fichier.write("import os\n"+ "ServerName = "+"\""+ ServerName +"\""+ "\n" +"os.system(ServerName+ \".jar\")")
 		fichier.close()
-		sys.path.append(pathact)
-		os.startfile(pathact + "zero.py") 
-
-	elif ServerBase == "3":
-		clear()
-		BoucleServer=Falseo
-
+		print("To start the server the server, launch the zero.py file in the folder " + ServerName)
 	else:
 		BoucleServer = True
 		clear()
