@@ -5,15 +5,18 @@ Create your own Minecraft server
 (http://image.noelshack.com/fichiers/2015/18/1430602757-minecraft.jpg)
 
 ## Installation
+
 ###Windows
 - Download the latest stable zip file here : https://github.com/dinnozap/MinecraftServerMaker/releases
 - unzip it
-- Install python : https://www.python.org/downloads/
+- Install python 3.x : https://www.python.org/downloads/
+- Install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
 - Run the main.py file with python
 - Done ! :)
 
 
-###Ubuntu
+###Ubuntu:
+-  Install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
 -  Download the latest stable zip file here : https://github.com/dinnozap/MinecraftServerMaker/releases
 -  unzip it 
 -  Run the main.py file with python
@@ -26,7 +29,9 @@ Create your own Minecraft server
 
 - Download the latest stable zip file here : https://github.com/dinnozap/MinecraftServerMaker/releases
 - unzip it
-- Install python : https://www.python.org/downloads/
+- install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
+- Install python 3.x : https://www.python.org/downloads/
+- 
 - Run the main.py file with python
 - Done ! :)
 
