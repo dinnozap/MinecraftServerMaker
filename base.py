@@ -9,12 +9,13 @@ from commun import *
 import subprocess
 import os, sys
 import threading
+
 clear()
 y = 1
 Y = 2
 n = 3
 N = 4 
-yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
+yn = raw_input("Do you really want to create your Minecraft Server ? Y/N     :")
 
 if yn == y or yn == Y:
 	yn = "Y"
@@ -31,17 +32,17 @@ while cont:
 		print("Wait one second...")
 		wait(1)
 		print("Please enter a correct value:")
-		yn = input("Do you really want to create your Minecraft Server ? Y/N")
+		yn = raw_input("Do you really want to create your Minecraft Server ? Y/N")
 
 
 #Create - Find ldink
-ServerName = input("Please enter the name of your futur server : ")
+ServerName = raw_input("Please enter the name of your futur server : ")
 if not os.path.exists(ServerName):
 	os.mkdir(ServerName)
 BoucleServer=True
 
 while BoucleServer:
-	ServerBase=input("Please choos :\n (1) CraftBukkit \n (2) Vanilla \n (3) Spigot\n\n Enter 1 or 2 or 3 : ")
+	ServerBase=raw_input("Please choos :\n (1) CraftBukkit \n (2) Vanilla \n (3) Spigot\n\n Enter 1 or 2 or 3 : ")
 	if ServerBase == "1":
 		clear()
 		BoucleServer=False	
@@ -58,8 +59,8 @@ while BoucleServer:
 		pathact = os.path.abspath(pathname) + "\\"
 		pathact = pathact + ServerName + '/'
 		print("pathact")
-		fichier = open(ServerName + "/" + "zero.py", "w")
-		fichier.write("import subprocess\n"+ "ServerName = "+"\""+ ServerName +"\""+ "\n" +"subprocess.call([\'java\', \'-jar\',ServerName +  \"/\"+ ServerName+\'.jar\'])")
+		fichier = open(ServerName + "/" + "name.py", "w")
+		fichier.write("ServerName = "+ "\""+ServerName+"\"")
 		fichier.close()
 		sys.path.append(pathact)
 		os.startfile(pathact + "zero.py") 
