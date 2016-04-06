@@ -16,9 +16,9 @@ yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
 
 cont = 1
 while cont:
-	if yn == "Y" or yn == "y":
+	if yn == "Y" or yn == "y" or yn == y or yn == Y:
 		cont = 0
-	elif yn == "N" or yn == "n":
+	elif yn == "N" or yn == "n" or yn == n or yn == N:
 		exit(0)
 	else:
 		print("Wait one second...")
