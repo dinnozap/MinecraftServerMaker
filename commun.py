@@ -60,7 +60,7 @@ def load(sec):
 
 def download(url, fichier):
 	pass
-	fileName = 'serveur/' + fichier
+	fileName = fichier
 	req = requests.get(url)
 	file = open(fileName, 'wb')
 	for chunk in req.iter_content(100000):

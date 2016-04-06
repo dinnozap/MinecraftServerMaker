@@ -7,7 +7,15 @@
 from commun import *
 import os
 
-os.remove("install.py")
+
+
+if os.path.isfile("install.py"):
+	os.remove("install.py")
+else:
+	pass
+
+
+
 bcl = 1
 nbnotfound = 1
 clear()

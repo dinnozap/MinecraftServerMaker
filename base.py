@@ -7,8 +7,8 @@ from commun import *
 
 #Requests
 import subprocess
-import os
-
+import os, sys
+import threading
 
 clear()
 yn = input("Do you really want to create your Minecraft Server ? Y/N     :")
@@ -27,8 +27,10 @@ while cont:
 		yn = input("Do you really want to create your Minecraft Server ? Y/N")
 
 
-#Create - Find link
+#Create - Find ldink
 ServerName = input("Please enter the name of your futur server : ")
+if not os.path.exists(ServerName):
+	os.mkdir(ServerName)
 BoucleServer=True
 
 while BoucleServer:
@@ -44,12 +46,20 @@ while BoucleServer:
 		clear()
 		print("We are downloading the server files, Please wait a few seconds .")
 
-		download(versionwant1 , ServerName+".jar")
-		subprocess.run(['java', '-jar', 'serveur/' + ServerName + '.jar'])
+		download(versionwant1 , ServerName + "/" + ServerName+".jar")
+		pathname = os.path.dirname(sys.argv[0])        
+		pathact = os.path.abspath(pathname) + "\\"
+		pathact = pathact + ServerName + '/'
+		print("pathact")
+		fichier = open(ServerName + "/" + "zero.py", "w")
+		fichier.write("import subprocess\n"+ "ServerName = "+"\""+ ServerName +"\""+ "\n" +"subprocess.call([\'java\', \'-jar\',ServerName +  \"/\"+ ServerName+\'.jar\'])")
+		fichier.close()
+		sys.path.append(pathact)
+		os.startfile(pathact + "zero.py") 
 
 	elif ServerBase == "3":
 		clear()
-		BoucleServer=False
+		BoucleServer=Falseo
 
 	else:
 		BoucleServer = True
