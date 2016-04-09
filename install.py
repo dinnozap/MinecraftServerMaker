@@ -47,15 +47,16 @@ def unzip(source , destination):
 ##------------ Path Install.py ------
 
 pathname = os.path.dirname(sys.argv[0])        
-pathact = os.path.abspath(pathname) + "/"
+pathact = os.path.abspath(pathname) + "/MSM/"
 print( pathact)
 
 ##---------------- Download + Unzip + Copy ----------
 
 Thread(download("https://github.com/dinnozap/MinecraftServerMaker/archive/master.zip", "MinecraftServerMaker.zip")).start()
 print("Téléchargement du fichier..")
-os.mkdir("MSM")
-unzip('tmp/MinecraftServerMaker.zip', '/MSM')
+if not os.path.exists("MSM"):
+        os.mkdir("MSM")
+unzip('tmp/MinecraftServerMaker.zip', '')
 
 src = "MinecraftServerMaker-master/"
 for fic in os.listdir(src):
