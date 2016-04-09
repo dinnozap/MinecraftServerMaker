@@ -1,3 +1,4 @@
+## Main FUnction
 def main():
 	##-------- Base Function -------------
 	def clear():
@@ -82,5 +83,6 @@ def main():
 	exit=input("Enter any word or key to exit : ")
 
 
+## Main Calling
 if __name__ == '__main__':
 	main()
