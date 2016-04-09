@@ -44,7 +44,7 @@ while BoucleServer:
 		print("We are downloading the server files, Please wait a few seconds .")
  
 		download(versionwant2 , ServerName + "/" + ServerName+".jar")
-		download("http://puu.sh/obMJC/90209b6f02.py",ServerName + "/" + "launch.py" )
+		download("http://puu.sh/o8uA9/fbe7e61cc6.py",ServerName + "/" + "launch.py" )
 		pathname = os.path.dirname(sys.argv[0])        
 		pathact = os.path.abspath(pathname) + "\\"
 		pathact = pathact + ServerName + '/'
@@ -52,7 +52,7 @@ while BoucleServer:
 		fichier.write("ServerName = \""+ServerName+"\"")
 		fichier.close()
 
-		print("To start the server the server, launch the launch.py file in the folder " + ServerName)
+		print("To start the server the server, launch the zero.py file in the folder " + ServerName)
 
 
 
