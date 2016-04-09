@@ -43,16 +43,16 @@ while BoucleServer:
 		print
 		print("We are downloading the server files, Please wait a few seconds .")
  
-		download(versionwant2 , ServerName + "/" + ServerName+".jar")
-		download("http://puu.sh/o8uA9/fbe7e61cc6.py",ServerName + "/" + "launch.py" )
+		download(versionwant2[0] , ServerName + "/" + ServerName+".jar")
+		download("http://164.132.53.179/msm/launch.py",ServerName + "/" + "launch.py")
 		pathname = os.path.dirname(sys.argv[0])        
 		pathact = os.path.abspath(pathname) + "\\"
 		pathact = pathact + ServerName + '/'
-		fichier = open(ServerName + "/" + "name.py", "w")
-		fichier.write("ServerName = \""+ServerName+"\"")
+		fichier = open(ServerName + "/" + "name.info", "w")
+		fichier.write(ServerName + "\n" + ServerBase + "\n"+ versionwant2[1])
 		fichier.close()
 
-		print("To start the server the server, launch the zero.py file in the folder " + ServerName)
+		print("To start the server the server, launch the launch.py file in the folder of your server ( " + ServerName + ")")
 
 
 
@@ -62,14 +62,14 @@ while BoucleServer:
 		versionwant1=Ch_Vanilla()
 		clear()
 		print("We are downloading the server files, Please wait a few seconds .")
-		download("http://puu.sh/o8uA9/fbe7e61cc6.py",ServerName + "/" + "launch.py" )
-		download(versionwant1 , ServerName + "/" + ServerName+".jar")
+		download("http://164.132.53.179/msm/launch.py",ServerName + "/" + "launch.py" )
+		download(versionwant1[0] , ServerName + "/" + ServerName+".jar")
 		pathname = os.path.dirname(sys.argv[0])        
 		pathact = os.path.abspath(pathname) + "\\"
 		pathact = pathact + ServerName + '/'
 		print("pathact")
-		fichier = open(ServerName + "/" + "zero.py", "w")
-		fichier.write("import os\n"+ "ServerName = "+"\""+ ServerName +"\""+ "\n" +"os.system(ServerName+ \".jar\")")
+		fichier = open(ServerName + "/" + "name.info", "w")
+		fichier.write(ServerName +"\n"+ ServerBase +"\n"+ versionwant1[1])
 		fichier.close()
 		print("To start the server the server, launch the zero.py file in the folder " + ServerName)
 	else:
