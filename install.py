@@ -54,7 +54,8 @@ print( pathact)
 
 Thread(download("https://github.com/dinnozap/MinecraftServerMaker/archive/master.zip", "MinecraftServerMaker.zip")).start()
 print("Téléchargement du fichier..")
-unzip('tmp/MinecraftServerMaker.zip', '')
+os.mkdir("MSM")
+unzip('tmp/MinecraftServerMaker.zip', '/MSM')
 
 src = "MinecraftServerMaker-master/"
 for fic in os.listdir(src):
@@ -64,4 +65,6 @@ for fic in os.listdir(src):
 
 shutil.rmtree("tmp")
 shutil.rmtree("MinecraftServerMaker-master")
-import main.py
+
+print("Now please start main.py in the MSM folder")
+exit=("Enter any word or key to exit")
