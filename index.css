@@ -1,0 +1,36 @@
+html, body
+{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: pink;
+}
+#msm
+{
+	margin-top: 50px;
+}
+#logo
+{
+	margin-top: 75px;
+	padding-bottom: 75px;
+}
+#logo img
+{
+	transition: all 1.333s;
+}
+#logo img:hover
+{
+	transform: scale(1.2);
+}
+@keyframes a {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+iframe
+{
+	position: relative;	
+	animation: a linear 3s;
+}
