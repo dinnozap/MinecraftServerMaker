@@ -31,7 +31,7 @@ fichier.write("eula = true")
 fichier.close()
 if not os.path.exists("world"):
 	print("Whitch type of Minecraft server you want to create ?")
-	a=input("[1] Pre-Build (Map and Plugin) Spigot Server [2]  Blanc Spigot Server [3] Sem-Build (Plugin prebuild) : ")
+	a=input("[1] Pre-Build (Map and Plugin) Spigot Server [2]  Blanc Spigot Server [3] Semi-Build (Plugin pre installed, blanc map) : ")
 	if a == '1':
 	 print(VersionServer)
 	 if VersionServer == '1.9' or VersionServer == '1.8' or VersionServer == '1.7.10':
@@ -46,4 +46,5 @@ if not os.path.exists("world"):
 	 subprocess.call(['java', '-jar', ServerName +'.jar'])
 	elif a==3:
 		download('https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/lastSuccessfulBuild/artifact/Essentials/target/Essentials-2.x-SNAPSHOT.jar', 'plugins/essentials.jar')
-		download('https://www.spigotmc.org/resources/sexymotd.2474/download?version=73466', 'plugins/motd.jar') subprocess.call(['java', '-jar', ServerName +'.jar'])
+		download('https://www.spigotmc.org/resources/sexymotd.2474/download?version=73466', 'plugins/motd.jar') 
+		subprocess.call(['java', '-jar', ServerName +'.jar'])
