@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 ########################################
 ### 	Minecraft Server Maker 		####
@@ -56,7 +57,7 @@ def main():
 		 
 				download(versionwant2[0] , ServerName + '/' + ServerName+'.jar')
 				clear()
-				download('http://puu.sh/od0Vt/cefd26ffbc.py',ServerName + '/' + 'launch.py')
+				download('https://raw.githubusercontent.com/dinnozap/MinecraftServerMaker/master/launch.py',ServerName + '/' + 'launch.py')
 				fichier = open(ServerName + '/' + 'name.info', 'w')
 				fichier.write(ServerName + '\n' + ServerBase + '\n'+ versionwant2[1])
 				fichier.close()
