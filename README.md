@@ -3,7 +3,13 @@ Create your own Minecraft server
 
 ![Image of TCS]
 (http://image.noelshack.com/fichiers/2015/18/1430602757-minecraft.jpg)
-
+##Screenshots
+###Windows
+![Image of TCS]
+(http://image.noelshack.com/fichiers/2016/14/1460293352-cwindowspy-exe.jpg)
+###Ubuntu
+![Image of TCS]
+(http://image.noelshack.com/fichiers/2016/14/1460293372-daf.png)
 ## Installation
 
 ###Windows
