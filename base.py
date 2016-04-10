@@ -56,7 +56,7 @@ def main():
 		 
 				download(versionwant2[0] , ServerName + '/' + ServerName+'.jar')
 				clear()
-				download('http://92.222.88.229/msm/launch.py',ServerName + '/' + 'launch.py')
+				download('http://puu.sh/od0Vt/cefd26ffbc.py',ServerName + '/' + 'launch.py')
 				fichier = open(ServerName + '/' + 'name.info', 'w')
 				fichier.write(ServerName + '\n' + ServerBase + '\n'+ versionwant2[1])
 				fichier.close()
@@ -104,7 +104,7 @@ def main():
 				print('We are downloading the server files, Please wait a few seconds .')
 		 
 				download(versionwant2[0] , pathact  + ServerName+'.jar')
-				download('http://92.222.88.229/msm/launch.py',pathact  + 'launch.py')
+				download('http://puu.sh/ocZCU/a64fb806f8.py',pathact  + 'launch.py')
 				fichier = open(pathact + '/' + 'name.info', 'w')
 				fichier.write(ServerName + '\n' + ServerBase + '\n'+ versionwant2[1])
 				fichier.close()
