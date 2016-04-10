@@ -80,7 +80,7 @@ def main():
 		pass
 	clear()
 	print("Now please start main.py in the MSM folder")
-	exit=input("Enter any word or key to exit : ")
+	exit=input("Press Enter to exit : ")
 
 
 ## Main Calling
