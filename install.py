@@ -1,50 +1,88 @@
-import subprocess, os, zipfile, requests
+## Main FUnction
+def main():
+	##-------- Base Function -------------
+	def clear():
+		print("\n" * 100)
+	clear()
+	##----------------- Librairies  
+	import os, sys, requests, zipfile, shutil
+	from threading import Thread
+	##------------------ Interaction -----------
 
-## Function Download
-def download(url, fichier):
- pass
- fileName = fichier
- req = requests.get(url)
- file = open(fileName, 'wb')
- for chunk in req.iter_content(100000):
-     file.write(chunk)
- file.close()
- print("The download is finish !")
-## Function Unzip
-def unzip(source , destination):
- with zipfile.ZipFile(source) as zf:
-  zf.extractall(destination)
-
-nameinfo = open("name.info", "r")
-
-ServerName = nameinfo.readline().rstrip()
-Version = nameinfo.readline().rstrip()
-VersionServer = nameinfo.readline().rstrip()
-
-nameinfo.close()
-
-subprocess.call(['java', '-jar', ServerName +'.jar'])
+	continu = True
+	iwant = input("The program \'Install.py\' go download all the files, do you want to continue ? Y/N : ")
+	while continu:
+		if iwant == "Y" or iwant == "y":
+			continu = False
+			clear()
+		elif iwant == "N" or iwant == "n":
+			continu = False
+			clear()
+			exit(0)
+		else:
+			clear()
+			iwant = input("Enter a correct value \n The program \'Install.py\' go download all the files, do you want to continue ? Y/N : ")
 
 
-fichier = open("eula.txt", "w")
-fichier.write("eula = true")
-fichier.close()
-if not os.path.exists("world"):
-	print("Whitch type of Minecraft server you want to create ?")
-	a=input("[1] Pre-Build (Map and Plugin) Spigot Server [2]  Blanc Spigot Server [3] Sem-Build (Plugin prebuild) : ")
-	if a == '1':
-	 print(VersionServer)
-	 if VersionServer == '1.9' or VersionServer == '1.8' or VersionServer == '1.7.10':
-	  download('http://puu.sh/ocXv2/ef4b3abc59.zip', 'world.zip')
-	  unzip('world.zip', '')
-	  if not os.path.exists("plugins"):
-	          os.mkdir("plugins")
-	  download('https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/lastSuccessfulBuild/artifact/Essentials/target/Essentials-2.x-SNAPSHOT.jar', 'plugins/essentials.jar')
-	  download('https://www.spigotmc.org/resources/sexymotd.2474/download?version=73466', 'plugins/motd.jar')
-	  subprocess.call(['java', '-jar', ServerName +'.jar'])
-	elif a=='2':
-	 subprocess.call(['java', '-jar', ServerName +'.jar'])
-	elif a=='3':
-		download('https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/lastSuccessfulBuild/artifact/Essentials/target/Essentials-2.x-SNAPSHOT.jar', 'plugins/essentials.jar')
-		download('https://www.spigotmc.org/resources/sexymotd.2474/download?version=73466', 'plugins/motd.jar') 
-		subprocess.call(['java', '-jar', ServerName +'.jar'])
+	##-------------Create the tmp folder --------
+	if not os.path.exists("tmp"):
+		os.mkdir("tmp")
+
+	##------------- Function ---------
+
+	def download(url, fichier):
+		print("Start of the download !!")
+		fileName = 'tmp/' + fichier
+		req = requests.get(url)
+		file = open(fileName, 'wb')
+		for chunk in req.iter_content(100000):
+			file.write(chunk)
+		file.close()
+		print("The download is finish !")
+
+	def unzip(source , destination):
+		with zipfile.ZipFile(source) as zf:
+			zf.extractall(destination)
+
+
+
+	##------------ Path Install.py ------
+
+	pathname = os.path.dirname(sys.argv[0])        
+	pathact = os.path.abspath(pathname) + "/MSM/"	
+
+	##---------------- Download + Unzip + Copy ----------
+
+	Thread(download("https://github.com/dinnozap/MinecraftServerMaker/archive/master.zip", "MinecraftServerMaker.zip")).start()
+	if not os.path.exists("MSM"):
+	        os.mkdir("MSM")
+	unzip('tmp/MinecraftServerMaker.zip', '')
+
+	src = "MinecraftServerMaker-master/"
+	for fic in os.listdir(src):
+		shutil.copy2(os.path.join(src, fic),pathact)
+
+	#------------- Delete TMP, Unzip Archive, Start Main
+
+	shutil.rmtree("tmp")
+	shutil.rmtree("MinecraftServerMaker-master")
+	if os.path.isfile("MSM/install.py"):
+		os.remove("MSM/install.py")
+	else:
+		pass
+	if os.path.isfile("MSM/launch.py"):
+		os.remove("MSM/launch.py")
+	else:
+		pass
+	if os.path.isfile("MSM/README.md"):
+		os.remove("MSM/README.md")
+	else:
+		pass
+	clear()
+	print("Now please start main.py in the MSM folder")
+	exit=input("Press enter")
+
+
+## Main Calling
+if __name__ == '__main__':
+	main()
