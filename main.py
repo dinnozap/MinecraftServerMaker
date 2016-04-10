@@ -31,8 +31,8 @@ while bcl:
 		clear()
 		print("Starting creation of the server")
 		load(4)
-		sub.call(['python', 'base.py'])
-
+		from base import main
+		main()
 		bcl = 0
 
 
