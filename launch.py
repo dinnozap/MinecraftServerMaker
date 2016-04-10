@@ -35,7 +35,7 @@ if not os.path.exists("world"):
 	if a == '1':
 	 print(VersionServer)
 	 if VersionServer == '1.9' or VersionServer == '1.8' or VersionServer == '1.7.10':
-	  download('http://puu.sh/ocXv2/ef4b3abc59.zip', 'world.zip')
+	  download('https://raw.githubusercontent.com/dinnozap/MinecraftServerMaker/master/world.zip', 'world.zip')
 	  unzip('world.zip', '')
 	  if not os.path.exists("plugins"):
 	          os.mkdir("plugins")
