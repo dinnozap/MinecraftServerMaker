@@ -37,8 +37,8 @@ if a == '1':
  print(VersionServer)
  if VersionServer == '1.9':
   print(VersionServer)
-  download('http://puu.sh/ocXv2/ef4b3abc59.zip', 'World.zip')
-  unzip('World.zip', '')
+  download('http://puu.sh/ocXv2/ef4b3abc59.zip', 'world.zip')
+  unzip('world.zip', '')
   if not os.path.exists("plugins"):
           os.mkdir("plugins")
   download('https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/lastSuccessfulBuild/artifact/Essentials/target/Essentials-2.x-SNAPSHOT.jar', 'plugins\essentials.jar')
