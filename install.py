@@ -78,6 +78,10 @@ def main():
 		os.remove("MSM/README.md")
 	else:
 		pass
+	if os.path.isfile("MSM/world.zip"):
+		os.remove("MSM/world.zip")
+	else:
+		pass
 	clear()
 	print("Now please start main.py in the MSM folder")
 	exit=input("Press Enter to exit : ")
