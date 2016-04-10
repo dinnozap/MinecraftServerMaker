@@ -42,9 +42,9 @@ if not os.path.exists("world"):
 	  download('https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/lastSuccessfulBuild/artifact/Essentials/target/Essentials-2.x-SNAPSHOT.jar', 'plugins/essentials.jar')
 	  download('https://www.spigotmc.org/resources/sexymotd.2474/download?version=73466', 'plugins/motd.jar')
 	  subprocess.call(['java', '-jar', ServerName +'.jar'])
-	elif a==2:
+	elif a=='2':
 	 subprocess.call(['java', '-jar', ServerName +'.jar'])
-	elif a==3:
+	elif a=='3':
 	 download('https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/lastSuccessfulBuild/artifact/Essentials/target/Essentials-2.x-SNAPSHOT.jar', 'plugins/essentials.jar')
 	 download('https://www.spigotmc.org/resources/sexymotd.2474/download?version=73466', 'plugins/motd.jar') 
 	 subprocess.call(['java', '-jar', ServerName +'.jar'])
