@@ -1,44 +1,70 @@
-#Minecraft Server Maker
-Create your own Minecraft server
+#Minecraft Server Maker - Neptune
+####Create your own Minecraft server
 
 ![Image of TCS]
 (http://image.noelshack.com/fichiers/2015/18/1430602757-minecraft.jpg)
 ##Screenshots
-###Windows
+####Windows
 ![Image of TCS]
 (http://image.noelshack.com/fichiers/2016/14/1460293352-cwindowspy-exe.jpg)
-###Ubuntu
+####Ubuntu
 ![Image of TCS]
 (http://image.noelshack.com/fichiers/2016/14/1460293372-daf.png)
+
 ## Installation
 
 ###Windows
-- Download the latest stable zip file here : https://github.com/dinnozap/MinecraftServerMaker/releases
-- unzip it
-- Install python 3.x : https://www.python.org/downloads/
-- Install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
-- Run the main.py file with python
-- Done ! :)
+
+- Make shure that you have python3.X 
+  - If you dont have it download it on : https://www.python.org/downloads/release/python-351/
+-  Install pip for python by downloading and runnig this script (with your python3 version : https://bootstrap.pypa.io/get-pip.py
+- Install 'requests' with pip:
+```
+python3 -m pip install requests
+```
+- Download 'install.py' on https://sourceforge.net/projects/minecraftservermaker/
+- Run 'install.py':
+```
+python3 install.py
+```
+- And follow all the instruction
+
+
 
 
 ###Ubuntu:
--  Install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
--  Download the latest stable zip file here : https://github.com/dinnozap/MinecraftServerMaker/releases
--  unzip it 
--  Run the main.py file with python
+
+- Make shure that you have python3.X
+  - If you dont have it download it on : https://www.python.org/downloads/release/python-351/
+-  Install pip for python by downloading and executing this script : https://bootstrap.pypa.io/get-pip.py
+- Install 'requests' with pip:
 ```
-./main.py
+python3 -m pip install requests
 ```
-- Done ! :)
+- Download 'install.py' on https://sourceforge.net/projects/minecraftservermaker/
+- Run 'install.py':
+```
+python3 install.py
+```
+- And follow all the instruction
+
 
 ###Mac OS X
 
-- Download the latest stable zip file here : https://github.com/dinnozap/MinecraftServerMaker/releases
-- unzip it
-- install pip for python by executing this script : https://bootstrap.pypa.io/get-pip.py
-- Install python 3.x : https://www.python.org/downloads/
-- Run the main.py file with python
-- Done ! :)
+- Make shure that you have python3.X 
+  - If you dont have it download it on : https://www.python.org/downloads/release/python-351/
+-  Install pip for python by downloading and runnig this script (with your python3 version : https://bootstrap.pypa.io/get-pip.py
+- Install 'requests' with pip:
+```
+python3 -m pip install requests
+```
+- Download 'install.py' on https://sourceforge.net/projects/minecraftservermaker/
+- Run 'install.py':
+```
+python3 install.py
+```
+- And follow all the instruction
+
 
 
 ## Video Tutorial
