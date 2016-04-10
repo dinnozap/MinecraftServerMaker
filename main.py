@@ -6,7 +6,7 @@
 
 from commun import *
 import os
-
+import subprocess as sub
 
 
 if os.path.isfile("install.py"):
@@ -31,7 +31,8 @@ while bcl:
 		clear()
 		print("Starting creation of the server")
 		load(4)
-		import base
+		sub.call(['python', 'base.py'])
+
 		bcl = 0
 
 
