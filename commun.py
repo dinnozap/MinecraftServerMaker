@@ -1,5 +1,4 @@
 import time
-import requests
 
 def log(logs):
 	print("[LOG]:  ", logs)
